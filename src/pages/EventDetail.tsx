@@ -242,6 +242,52 @@ const EventDetail = () => {
               </p>
             </div>
 
+            {/* Event Spotlight Video + Card */}
+            <div className="grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(280px,1fr)] items-stretch">
+              <div className="relative rounded-2xl border border-border bg-background/70 overflow-hidden">
+                <div className="absolute inset-0 opacity-60 pointer-events-none bg-gradient-to-br from-primary/5 via-transparent to-secondary/15" />
+                <div className="relative p-2">
+                  <div className="rounded-xl overflow-hidden aspect-video bg-muted shadow-lg shadow-primary/10">
+                    <video
+                      src="https://leapmile-website.blr1.cdn.digitaloceanspaces.com/IMS_Event.mp4"
+                      controls
+                      playsInline
+                      poster={`https://leapmile-website.blr1.digitaloceanspaces.com/${galleryImages[0]}`}
+                      className="w-full h-full object-cover"
+                    >
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative rounded-2xl border border-border bg-background/80 backdrop-blur-sm overflow-hidden">
+                <div className="absolute inset-0 opacity-70 pointer-events-none bg-gradient-to-br from-primary/10 via-transparent to-secondary/20" />
+                <div className="relative h-full flex flex-col gap-6 p-6">
+                  <div className="space-y-3">
+                    <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground">Event Spotlight</p>
+                    <h3 className="text-2xl font-semibold text-foreground">Leapmile Robotics Leads the Future</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Live autonomous demos, smart warehouse systems, and seamless robotics at Bengaluru’s premier
+                      automation showcase. Collaborations sparked across industry leaders, reinforcing Leapmile’s role at
+                      the forefront of India’s automation landscape.
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div className="rounded-xl border border-border/60 p-4 bg-background/70">
+                      <p className="text-muted-foreground uppercase tracking-wide text-[11px]">Location</p>
+                      <p className="text-foreground font-semibold mt-1">Bengaluru</p>
+                    </div>
+                    <div className="rounded-xl border border-border/60 p-4 bg-background/70">
+                      <p className="text-muted-foreground uppercase tracking-wide text-[11px]">Focus</p>
+                      <p className="text-foreground font-semibold mt-1">Autonomous Warehousing</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Featured Hero Image */}
             <figure
               className="rounded-lg overflow-hidden group relative cursor-pointer mb-6 aspect-video bg-muted"
